@@ -2,50 +2,60 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
-  const GITHUB_URL = "https://github.com/bilalahmed251";
-
   const projects = [
     {
-      title: 'Mobile Price Prediction',
-      category: 'DATA ANALYSIS',
-      description: 'Comprehensive EDA on 2,000+ mobile devices using Python to identify key pricing drivers like RAM and battery capacity.',
-      img: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1000',
-      tags: ['Python', 'Pandas', 'EDA']
+      title: 'Motor Fault Diagnostics',
+      category: 'DEPLOYED APP',
+      description: 'Real-time industrial motor fault detection using vibration signal classification, deployed as a live Streamlit app for instant browser-based predictions.',
+      img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
+      tags: ['Python', 'Streamlit', 'Hugging Face'],
+      link: 'https://huggingface.co/spaces/b098/motor-fault-diagnostics',
+      cta: 'View Live Demo'
     },
     {
-      title: 'Diabetes Prediction ML',
+      title: 'SMS Spam Classifier',
+      category: 'NLP APP',
+      description: 'Deployed NLP text classification model detecting spam vs. legitimate SMS with 95%+ accuracy, via an interactive Streamlit interface on Hugging Face Spaces.',
+      img: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=1000',
+      tags: ['NLP', 'Scikit-learn', 'Streamlit'],
+      link: 'https://huggingface.co/spaces/b098/SMS-Spam-Classifier',
+      cta: 'View Live Demo'
+    },
+    {
+      title: 'Diabetes Risk Prediction',
       category: 'MACHINE LEARNING',
-      description: 'Predictive modeling using Random Forest and XGBoost with SHAP interpretation to identify early-stage medical risks.',
+      description: 'Predictive modeling with Logistic Regression, Random Forest, and XGBoost; resolved class imbalance with SMOTE and interpreted results using SHAP.',
       img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000',
-      tags: ['XGBoost', 'SHAP', 'Classification']
+      tags: ['XGBoost', 'SHAP', 'SMOTE'],
+      link: 'https://github.com/bilalahmed251/-Diabetes-Prediction-using-Machine-Learning',
+      cta: 'View Code'
     },
     {
-      title: 'Laravel Sanitary Hub',
-      category: 'WEB DEVELOPMENT',
-      description: 'Full-stack shop management system where administrators can manage inventory and showcase popular products dynamically.',
-      img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1000',
-      tags: ['Laravel', 'SQL', 'PHP']
+      title: 'Customer Churn Prediction',
+      category: 'PREDICTIVE',
+      description: 'End-to-end ML pipeline with feature engineering, hyperparameter tuning, and ensemble methods to surface churn risk drivers and retention insights.',
+      img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
+      tags: ['Pipeline', 'GridSearchCV', 'Retention'],
+      link: 'https://github.com/bilalahmed251/Customer-Churn-Prediction',
+      cta: 'View Code'
     },
     {
       title: 'Netflix Content EDA',
       category: 'VISUALIZATION',
-      description: 'Detailed analysis of content distribution trends on Netflix, focusing on movie vs TV show ratios and genre popularity.',
+      description: 'Exploratory analysis of content distribution trends on Netflix, focusing on movie vs. TV show ratios and genre popularity across regions.',
       img: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=1000',
-      tags: ['Seaborn', 'Visualization', 'Correlation']
-    },
-    {
-      title: 'Customer Churn Model',
-      category: 'PREDICTIVE',
-      description: 'Applying GridSearchCV and data preprocessing to build an optimized retention model using industrial datasets.',
-      img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
-      tags: ['GridSearchCV', 'Preprocessing', 'ML']
+      tags: ['Seaborn', 'EDA', 'Matplotlib'],
+      link: 'https://github.com/bilalahmed251/netflix-eda-project',
+      cta: 'View Code'
     },
     {
       title: 'Titanic Survival Model',
       category: 'MACHINE LEARNING',
-      description: 'The classic classification project determining survival rates using feature engineering and optimized ML algorithms.',
+      description: 'Classic classification project determining survival rates using feature engineering and comparison of optimized ML algorithms.',
       img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
-      tags: ['Classification', 'Scikit-learn', 'Titanic']
+      tags: ['Classification', 'Scikit-learn', 'Titanic'],
+      link: 'https://github.com/bilalahmed251/titanic-ml-project',
+      cta: 'View Code'
     }
   ];
 
@@ -114,11 +124,11 @@ const Projects: React.FC = () => {
                 <motion.a 
                   whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,1)', color: '#020617' }}
                   whileTap={{ scale: 0.98 }}
-                  href={GITHUB_URL}
+                  href={proj.link}
                   target="_blank"
                   className="block w-full py-4 border border-white/10 rounded-2xl text-center text-[10px] font-black uppercase tracking-[0.2em] text-white transition-all backdrop-blur-sm"
                 >
-                  Access Repository
+                  {proj.cta}
                 </motion.a>
               </div>
             </motion.div>

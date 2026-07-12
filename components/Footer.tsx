@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const Footer: React.FC = () => {
   const GITHUB_URL = "https://github.com/bilalahmed251";
   const LINKEDIN_URL = "https://www.linkedin.com/in/bilalahmed-data";
+  const HF_URL = "https://huggingface.co/b098";
   const currentYear = new Date().getFullYear();
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -23,7 +24,7 @@ const Footer: React.FC = () => {
               BILAL <span className="text-emerald-500">AHMED</span>
             </h2>
             <p className="text-slate-400 max-w-sm text-sm leading-relaxed mb-10 italic">
-              "Transforming raw data into actionable intelligence through machine learning pipelines and high-performance automation scripts."
+              "Delivering end-to-end machine learning solutions — from data cleaning to deployed web apps. Available for freelance and contract work."
             </p>
             <div className="flex gap-8">
               <motion.a 
@@ -43,6 +44,15 @@ const Footer: React.FC = () => {
                 aria-label="LinkedIn"
               >
                 LinkedIn
+              </motion.a>
+              <motion.a 
+                href={HF_URL} 
+                target="_blank" 
+                whileHover={{ scale: 1.2, color: '#10b981' }} 
+                className="text-slate-500 transition-colors font-bold uppercase tracking-widest text-[10px]"
+                aria-label="Hugging Face"
+              >
+                Hugging Face
               </motion.a>
               <motion.a 
                 href="mailto:ba6503833@gmail.com" 
@@ -69,7 +79,7 @@ const Footer: React.FC = () => {
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
               <span className="text-slate-500 text-xs font-bold uppercase tracking-widest">System Operational</span>
             </div>
-            <p className="text-slate-700 text-[9px] font-mono uppercase mt-4 tracking-[0.3em]">Location: Gujranwala, PK</p>
+            <p className="text-slate-700 text-[9px] font-mono uppercase mt-4 tracking-[0.3em]">Location: Lahore, PK</p>
           </div>
         </div>
 

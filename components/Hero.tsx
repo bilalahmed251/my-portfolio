@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
-  const phrases = ['Python Developer', 'ML Engineer', 'SQL Architect', 'Data Scientist'];
+  const phrases = ['ML Engineer', 'NLP Developer', 'Freelance Data Scientist', 'Model Deployment Specialist'];
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   const GITHUB_URL = "https://github.com/bilalahmed251";
   const LINKEDIN_URL = "https://www.linkedin.com/in/bilalahmed-data";
+  const HF_URL = "https://huggingface.co/b098";
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -52,7 +53,7 @@ const Hero: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            System_Status: Fully Operational
+            Available for Freelance Projects
           </motion.div>
 
           <motion.h1 
@@ -77,7 +78,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center justify-center gap-6">
               <span className="h-[1px] w-12 bg-slate-800"></span>
               <p className="text-slate-500 text-sm md:text-base uppercase tracking-[0.6em] font-mono font-bold">
-                GIFT UNIVERSITY | BS DATA SCIENCE
+                GIFT UNIVERSITY | BS DATA SCIENCE | 6+ DEPLOYED APPS
               </p>
               <span className="h-[1px] w-12 bg-slate-800"></span>
             </div>
@@ -106,6 +107,15 @@ const Hero: React.FC = () => {
               className="px-14 py-6 glass border border-white/10 text-white font-black rounded-3xl transition-all uppercase tracking-[0.2em] text-[10px]"
             >
               Access Archive
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.08)', borderColor: 'rgba(255,255,255,0.3)' }}
+              whileTap={{ scale: 0.95 }}
+              href={HF_URL} 
+              target="_blank"
+              className="px-14 py-6 glass border border-white/10 text-white font-black rounded-3xl transition-all uppercase tracking-[0.2em] text-[10px]"
+            >
+              View Live Demos
             </motion.a>
           </motion.div>
         </div>

@@ -28,11 +28,11 @@ const About: React.FC = () => {
 
             <div className="space-y-10 mb-20 max-w-3xl mx-auto">
               <p className="text-3xl md:text-4xl text-slate-300 leading-tight font-light italic">
-                "I specialize in bridging the gap between <span className="text-white font-bold">raw computational power</span> and <span className="text-emerald-400 font-bold">business intelligence</span>."
+                "I specialize in bridging the gap between <span className="text-white font-bold">raw data</span> and <span className="text-emerald-400 font-bold">deployed, client-ready ML solutions</span>."
               </p>
               
               <p className="text-slate-500 leading-relaxed text-lg md:text-xl font-medium">
-                As a Data Science student at GIFT University, I am committed to building the next generation of predictive systems. My methodology integrates advanced statistical modeling with modern ML frameworks to unlock actionable insights from complex datasets.
+                As a Data Science student at GIFT University, I build and ship end-to-end machine learning systems — from data cleaning to deployed web apps. I've deployed 6+ live projects on Hugging Face Spaces spanning predictive modelling, NLP, and computer vision, and I'm available for freelance project-based work.
               </p>
             </div>
             
@@ -59,11 +59,11 @@ const About: React.FC = () => {
               className="mt-12 p-12 glass rounded-[3.5rem] border border-white/5 bg-gradient-to-r from-emerald-500/10 via-transparent to-transparent group text-left"
             >
               <div className="flex justify-between items-center mb-8">
-                <h3 className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.5em] font-bold">Active Deployment</h3>
-                <div className="px-4 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-[9px] font-bold text-emerald-400 uppercase tracking-widest animate-pulse">Live</div>
+                <h3 className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.5em] font-bold">Current Status</h3>
+                <div className="px-4 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-[9px] font-bold text-emerald-400 uppercase tracking-widest animate-pulse">Available</div>
               </div>
-              <p className="text-white font-black text-2xl mb-3 tracking-tight">GIFT University Admission Office</p>
-              <p className="text-slate-500 text-sm md:text-base uppercase font-mono tracking-[0.4em] font-bold italic">Operations & Strategy Specialist (2024–Present)</p>
+              <p className="text-white font-black text-2xl mb-3 tracking-tight">Open to Freelance & Contract ML Work</p>
+              <p className="text-slate-500 text-sm md:text-base uppercase font-mono tracking-[0.4em] font-bold italic">Data Analysis · ML Deployment · NLP Automation</p>
             </motion.div>
           </motion.div>
         </div>

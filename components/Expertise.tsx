@@ -4,25 +4,25 @@ import { motion } from 'framer-motion';
 const Expertise: React.FC = () => {
   const expertises = [
     {
-      title: 'Backend & Automation',
+      title: 'ML Modeling & Deployment',
       icon: '⚡',
-      skills: ['Python', 'Java', 'Selenium', 'Scrapy', 'API Integration'],
-      description: 'Developing high-efficiency automated crawlers and robust backend logic to streamline data acquisition and processing.',
+      skills: ['Scikit-learn', 'XGBoost', 'TensorFlow', 'PyTorch', 'Streamlit'],
+      description: 'Training predictive models and shipping them as live, usable apps — 6+ projects deployed on Hugging Face Spaces with real-time browser demos.',
       color: 'from-emerald-500/20'
     },
     {
-      title: 'Data Engineering & Analysis',
-      icon: '💾',
-      skills: ['SQL (MySQL/Postgres)', 'Pandas', 'NumPy', 'Excel', 'R'],
-      description: 'Architecting relational schemas and performing complex exploratory data analysis to uncover hidden market patterns.',
-      color: 'from-blue-500/20'
+      title: 'NLP & Computer Vision',
+      icon: '🧠',
+      skills: ['Text Classification', 'Spam Detection', 'MNIST Digit Recognition', 'Feature Engineering'],
+      description: 'Building NLP pipelines and vision models for real classification tasks, from raw text/images to deployed prediction interfaces.',
+      color: 'from-emerald-600/20'
     },
     {
-      title: 'AI & Machine Learning',
-      icon: '🧠',
-      skills: ['Regression', 'Classification', 'Scikit-learn', 'XGBoost', 'SHAP'],
-      description: 'Training predictive models and implementing model interpretation techniques to solve real-world classification problems.',
-      color: 'from-emerald-600/20'
+      title: 'Data Analysis & Visualization',
+      icon: '💾',
+      skills: ['Pandas', 'NumPy', 'SQL', 'Power BI', 'SHAP', 'GridSearchCV'],
+      description: 'Turning raw datasets into clear insights through EDA, interpretable models, and dashboards clients can actually act on.',
+      color: 'from-blue-500/20'
     }
   ];
 
