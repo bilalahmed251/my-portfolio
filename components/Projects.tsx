@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group glass rounded-[2.5rem] overflow-hidden border border-white/5 transition-all duration-500 flex flex-col h-full hover:border-emerald-500/30 hover:shadow-[0_0_50px_-12px_rgba(16,185,129,0.3)]"
+              className="group glass-card overflow-hidden transition-all duration-500 flex flex-col h-full hover:border-emerald-500/30 hover:shadow-[0_0_50px_-12px_rgba(16,185,129,0.3)]"
             >
               <div className="h-64 overflow-hidden relative">
                 {/* Dark overlay that fades on hover */}

@@ -7,19 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
             },
             colors: {
               accent: {
                 emerald: '#10b981',
                 blue: '#3b82f6',
-                slate: '#0f172a'
+                slate: '#0f172a',
+                purple: '#8b5cf6',
+                indigo: '#4f46e5'
               },
               'neon-cyan': '#06b6d4',
               'neon-purple': '#8b5cf6'
@@ -30,29 +33,42 @@
     </script>
     <style>
       body {
-        background-color: #020617;
+        background-color: #030014;
         color: #f8fafc;
         overflow-x: hidden;
       }
       .glass {
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(15, 23, 42, 0.3);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        transition: all 0.3s ease;
+      }
+      .glass-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
       .text-gradient {
-        background: linear-gradient(to right, #10b981, #3b82f6);
+        background: linear-gradient(to right, #10b981, #3b82f6, #8b5cf6);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       ::-webkit-scrollbar { width: 6px; }
-      ::-webkit-scrollbar-track { background: #020617; }
+      ::-webkit-scrollbar-track { background: #030014; }
       ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #10b981; }
       
       @keyframes pulse-slow {
-        0%, 100% { opacity: 0.2; }
-        50% { opacity: 0.4; }
+        0%, 100% { opacity: 0.1; }
+        50% { opacity: 0.3; }
       }
       .animate-pulse-slow {
         animation: pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;

@@ -48,7 +48,7 @@ const Expertise: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}
-              className={`glass p-10 rounded-[3rem] border-white/5 relative group cursor-default h-full flex flex-col`}
+              className={`glass-card p-10 relative group cursor-default h-full flex flex-col`}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[3rem]`}></div>
               
