@@ -3,69 +3,53 @@ import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-32 relative bg-[#020617] border-y border-white/5 overflow-hidden">
-      {/* Subtle Background Detail */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-[150px] pointer-events-none"></div>
-
+    <section id="about" className="py-24 relative bg-deep-space">
       <div className="container mx-auto px-6 relative z-10">
+        
         <div className="max-w-4xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="flex items-center gap-4 mb-12"
           >
-            <div className="flex items-center justify-center gap-6 mb-12">
-              <div className="w-16 h-[1px] bg-emerald-500/30"></div>
-              <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-[0.6em] font-bold italic">The Core Mission</span>
-              <div className="w-16 h-[1px] bg-emerald-500/30"></div>
-            </div>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white uppercase tracking-tight">System.<span className="text-accent-pink">About</span>()</h2>
+            <div className="h-[1px] flex-grow bg-gradient-to-r from-accent-pink/50 to-transparent"></div>
+          </motion.div>
 
-            <h2 className="text-6xl md:text-8xl font-black mb-12 leading-[0.85] uppercase tracking-tighter text-white">
-              STRATEGIC <br /> 
-              <span className="text-gradient">OBJECTIVE</span>
-            </h2>
-
-            <div className="space-y-10 mb-20 max-w-3xl mx-auto">
-              <p className="text-3xl md:text-4xl text-slate-300 leading-tight font-light italic">
-                "I specialize in bridging the gap between <span className="text-white font-bold">raw data</span> and <span className="text-emerald-400 font-bold">deployed, client-ready ML solutions</span>."
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-8 glass-card p-8 md:p-10"
+            >
+              <h3 className="text-2xl text-white font-medium mb-6">Bridging the Gap Between <span className="text-gradient">Data and Impact</span></h3>
+              <p className="text-slate-300 leading-relaxed mb-6">
+                I am a passionate Machine Learning Engineer and Data Scientist with a degree in Data Science from GIFT University. My journey revolves around architecting intelligent systems that extract actionable insights and automate complex workflows.
               </p>
-              
-              <p className="text-slate-500 leading-relaxed text-lg md:text-xl font-medium">
-                As a Data Science student at GIFT University, I build and ship end-to-end machine learning systems — from data cleaning to deployed web apps. I've deployed 6+ live projects on Hugging Face Spaces spanning predictive modelling, NLP, and computer vision, and I'm available for freelance project-based work.
+              <p className="text-slate-300 leading-relaxed">
+                Whether it's building state-of-the-art Natural Language Processing models, deploying highly scalable Computer Vision applications, or crafting end-to-end predictive analytics pipelines, I thrive on solving hard problems with elegant, data-driven solutions.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-              <motion.div 
-                whileHover={{ y: -5, borderColor: 'rgba(16,185,129,0.5)', backgroundColor: 'rgba(16,185,129,0.02)' }}
-                className="p-10 glass rounded-[3rem] border-l-4 border-emerald-500 transition-all cursor-default"
-              >
-                <div className="text-white font-black text-2xl mb-1 tracking-widest uppercase italic">ACADEMIA</div>
-                <div className="text-[10px] text-slate-500 uppercase font-mono tracking-widest mt-3 font-bold">GIFT UNIVERSITY (2023-2027)</div>
-              </motion.div>
-              
-              <motion.div 
-                whileHover={{ y: -5, borderColor: 'rgba(6,182,212,0.5)', backgroundColor: 'rgba(6,182,212,0.02)' }}
-                className="p-10 glass rounded-[3rem] border-l-4 border-neon-cyan transition-all cursor-default"
-              >
-                <div className="text-white font-black text-2xl mb-1 tracking-widest uppercase italic">CERTIFICATION</div>
-                <div className="text-[10px] text-slate-500 uppercase font-mono tracking-widest mt-3 font-bold">SQL / PYTHON / ML-OPS</div>
-              </motion.div>
-            </div>
+            </motion.div>
 
             <motion.div 
-              whileHover={{ scale: 1.01 }}
-              className="mt-12 p-12 glass rounded-[3.5rem] border border-white/5 bg-gradient-to-r from-emerald-500/10 via-transparent to-transparent group text-left"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-4 flex flex-col gap-6"
             >
-              <div className="flex justify-between items-center mb-8">
-                <h3 className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.5em] font-bold">Current Status</h3>
-                <div className="px-4 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-[9px] font-bold text-emerald-400 uppercase tracking-widest animate-pulse">Available</div>
+              <div className="glass-card p-8 text-center flex flex-col justify-center items-center h-full group hover:-translate-y-2 transition-transform">
+                <h4 className="text-6xl font-display font-black text-accent-cyan mb-2 group-hover:scale-110 transition-transform">6+</h4>
+                <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">Enterprise<br/>Applications</p>
               </div>
-              <p className="text-white font-black text-2xl mb-3 tracking-tight">Open to Freelance & Contract ML Work</p>
-              <p className="text-slate-500 text-sm md:text-base uppercase font-mono tracking-[0.4em] font-bold italic">Data Analysis · ML Deployment · NLP Automation</p>
+              <div className="glass-card p-8 text-center flex flex-col justify-center items-center h-full group hover:-translate-y-2 transition-transform">
+                <h4 className="text-6xl font-display font-black text-accent-purple mb-2 group-hover:scale-110 transition-transform">99%</h4>
+                <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">Client<br/>Satisfaction</p>
+              </div>
             </motion.div>
-          </motion.div>
+          </div>
+
         </div>
       </div>
     </section>
